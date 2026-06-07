@@ -19,22 +19,23 @@
 .sc-16edoyw-0 {
   display: flex;
   align-items: center;
-  gap: 24px;
-  max-width: 1280px;
+  gap: 40px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 16px 32px;
 }
 
-.sc-16edoyw-1 { display: flex; align-items: center; gap: 16px; margin-left: auto; }
-.sc-16edoyw-2 { display: flex; align-items: center; flex: 1; justify-content: center; }
-.sc-16edoyw-3 { display: flex; align-items: center; gap: 28px; }
+.sc-16edoyw-1 { display: flex; align-items: center; gap: 24px; margin-left: auto; }
+.sc-16edoyw-2 { display: flex; align-items: center; flex: 1; justify-content: center; max-width: 480px; margin: 0 32px; }
+.sc-16edoyw-3 { display: flex; align-items: center; gap: 36px; }
 .sc-16edoyw-4 { display: none; }
 .sc-16edoyw-5 { display: flex; align-items: center; }
+.sc-16edoyw-5 + .sc-16edoyw-5 { margin-left: 24px; }
 
 .sc-19lw863-0 nav ul {
   list-style: none;
   display: flex;
-  gap: 28px;
+  gap: 36px;
   margin: 0;
   padding: 0;
 }
@@ -45,7 +46,7 @@
   font-size: 15px;
   color: var(--bway-colors-text);
   margin: 0;
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 2px solid transparent;
   transition: border-color .15s ease, color .15s ease;
 }
@@ -61,11 +62,12 @@
   color: var(--bway-colors-text-subtle);
   text-decoration: none;
   white-space: nowrap;
+  padding: 8px 4px;
 }
 .sc-jrsJWq:hover { color: var(--bway-colors-text); }
 
 .sc-ckTSur { display: none; }
-.sc-ftml9m-0 { display: flex; align-items: center; gap: 12px; margin-left: 8px; }
+.sc-ftml9m-0 { display: flex; align-items: center; gap: 16px; margin-left: 16px; }
 
 /* ---- Search bar ---- */
 .sc-oeezq.loaCTG, .sc-16edoyw-4 form { width: 100%; }
@@ -188,7 +190,7 @@
 
 /* ---- Footer (custom, faithful to viagogo brand: dark band, orange accents) ---- */
 .site-footer {
-  background: var(--bway-colors-primitives-neutral-10, #1a1a1a);
+  background: var(--bway-colors-primitives-neutral-0, #000);
   color: var(--bway-colors-primitives-neutral-90, #e6e6e6);
   margin-top: 48px;
   padding: 48px 0 28px;
