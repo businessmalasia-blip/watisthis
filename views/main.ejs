@@ -1,73 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <%- include('partials/head') %>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= title %></title>
+<link rel="stylesheet" href="/css/viagogo-original.css">
 </head>
 <body>
-  <%- include('partials/header', { activeNav: null }) %>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Live events, real seats, real experiences.</h1>
-      <p>Discover concerts, sports and theatre happening near you — and buy or sell tickets with confidence on the world's largest ticket marketplace.</p>
-      <a href="/category/concerts" class="btn btn-primary">Explore concerts</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Trending Concerts</h2>
-      <div class="card-grid">
-        <% ['Bad Bunny - World Tour', 'Taylor Swift', 'Coldplay', 'Drake'].forEach(function(name) { %>
-          <a href="/category/concerts" class="card">
-            <div class="card-image">Event image</div>
-            <div class="card-body">
-              <h3 class="card-title"><%= name %></h3>
-              <p class="card-meta">Multiple dates &middot; Various venues</p>
-              <p class="card-price">From <strong>$99</strong></p>
-            </div>
-          </a>
-        <% }) %>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Top Sports Events</h2>
-      <div class="card-grid">
-        <% ['Lakers vs Celtics', 'Real Madrid vs Barcelona', 'US Open Finals', 'Champions League Final'].forEach(function(name) { %>
-          <a href="/category/sports" class="card">
-            <div class="card-image">Event image</div>
-            <div class="card-body">
-              <h3 class="card-title"><%= name %></h3>
-              <p class="card-meta">Multiple dates &middot; Various venues</p>
-              <p class="card-price">From <strong>$89</strong></p>
-            </div>
-          </a>
-        <% }) %>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Theatre Highlights</h2>
-      <div class="card-grid">
-        <% ['Hamilton', 'The Lion King', 'Wicked', 'Hadestown'].forEach(function(name) { %>
-          <a href="/category/theatre" class="card">
-            <div class="card-image">Event image</div>
-            <div class="card-body">
-              <h3 class="card-title"><%= name %></h3>
-              <p class="card-meta">Multiple dates &middot; Various venues</p>
-              <p class="card-price">From <strong>$55</strong></p>
-            </div>
-          </a>
-        <% }) %>
-      </div>
-    </div>
-  </section>
-
-  <%- include('partials/footer') %>
-</body>
-</html>
+<%- include('partials/header') %><div class="sc-fXgAZu eVUTIQ"><div class="sc-1tj3e7z-1 hkmbPV" style=overflow-x:hidden><div class="sc-oeezq cHrMfA sc-1tj3e7z-0 iNqazz"><main class="sc-mcpoo6-0 ghUoZz"><div><h2 class="bway-hEYtOD bway-eaSvqy bway-ggBJmy bway-loPDgg" data-custom-color=false>Popular events</h2><div class="bway-fPSCSl bway-hyZZHG bway-iujNhp bway-cohPWj bway-cohPNt bway-dMMvtG bway-lnMGUd"><div class="sc-cqgzlb-0 CVsli"><div class="sc-cqgzlb-1 eXQYyo"><% events.forEach(function(event, idx) { %><div data-carousel-index="<%= idx %>" data-index="<%= idx %>"><div class="bway-jTBMCa bway-cGFOOL bway-dMMvtG bway-fXZpbv bway-kqkIZP bway-kqkBNx bway-hAdeLJ bway-hAdeAP bway-kuwQsx bway-jbvxCP bway-kwfaIH bway-iZNqtd bway-dYRhWt group"><div class="bway-jTBMCa bway-kuwQsx bway-jbvxCP bway-kwfaIH bway-iZNqtd bway-kjFaWU bway-kjEPjR bway-zdlLq"><div class="bway-jYfgsR bway-iADuvR bway-dMMvtG bway-gITetL bway-hMgsSf bway-hMgtcR bway-fPSCSl bway-dDVHGs bway-FDJHH bway-ijtAUt"><div class="bway-cohPWj bway-ahkVc"><button aria-label=Follow class="sc-ln2vk9-3 rabAu"><div class="sc-ln2vk9-4 hWZBMu"><p class="sc-ln2vk9-2 sc-ln2vk9-5 sc-ln2vk9-6 haheqt feLvfT bwEFFN">Followed<p class="sc-ln2vk9-2 sc-ln2vk9-5 sc-ln2vk9-7 haheqt feLvfT frlgZB">Follow<p class="sc-ln2vk9-2 sc-ln2vk9-5 sc-ln2vk9-8 haheqt feLvfT cEHwVm">0</p></div><div class="sc-ln2vk9-0 iMEYPW bway-jTBMCa bway-bYPHwJ bway-hAdeMc bway-hAdeAK bway-gKQctb"><svg aria-labelledby="title desc" fill=none height=20px viewBox="0 0 20 20" width=20px xmlns=http://www.w3.org/2000/svg class=bway-bcSDrL role=graphics-symbol><path clip-rule=evenodd d="M4.348 2.33C1.383 3.447.202 6.778 1.56 9.465 2.714 11.745 5.14 14.737 10 18c4.86-3.264 7.286-6.255 8.44-8.535 1.358-2.687.177-6.018-2.788-7.135-1.947-.735-3.52-.11-4.53.584A6 6 0 0 0 10 3.908a6 6 0 0 0-1.123-.994c-1.01-.694-2.582-1.319-4.529-.584m4.52 2.563.755.867a.5.5 0 0 0 .754 0l.754-.867c.46-.528 1.944-1.932 3.992-1.16A3.616 3.616 0 0 1 17.1 8.789c-.948 1.874-2.965 4.466-7.101 7.39-4.136-2.924-6.154-5.517-7.101-7.39a3.617 3.617 0 0 1 1.979-5.055c2.048-.772 3.53.632 3.99 1.16" fill=#fff fill-rule=evenodd></path><path clip-rule=evenodd d="m8.869 4.893.754.867a.5.5 0 0 0 .754 0l.754-.867c.46-.528 1.944-1.932 3.992-1.16A3.616 3.616 0 0 1 17.1 8.789c-.948 1.874-2.965 4.466-7.101 7.39-4.136-2.924-6.154-5.517-7.101-7.39a3.617 3.617 0 0 1 1.979-5.055c2.047-.772 3.53.632 3.99 1.16" fill=#000 fill-opacity=0.38 fill-rule=evenodd></path><path d="m8.869 4.893.754.867a.5.5 0 0 0 .754 0l.754-.867c.46-.528 1.944-1.932 3.992-1.16A3.616 3.616 0 0 1 17.1 8.789c-.948 1.874-2.965 4.466-7.101 7.39-4.136-2.924-6.154-5.517-7.101-7.39a3.617 3.617 0 0 1 1.979-5.055c2.047-.772 3.53.632 3.99 1.16" fill=#000 fill-opacity=0.38></path></svg></div></button></div></div><img alt="<%= event.name %>" class="sc-204wgd-6 cErtqe bway-GAlSP bway-gjlhJB bway-cqnbDw bway-kMmJJM bway-gqYEW bway-laXmmc bway-laXeRW bway-cLmRpE bway-cAMmcd" src="<%= event.image %>"><div class="bway-jYfgsR bway-iADuvR bway-dMMvtN bway-dMMvtG bway-irclzX"></div></div><div class="bway-eCTqmM bway-laXmmc bway-laXeRW bway-jYfgsR bway-hhbYfh bway-cAMmcd bway-htxExB bway-htxyLT bway-VlyYl bway-VlzgD"><h2 class="bway-hEYtOD bway-eaSvqy bway-cDMLQI bway-gjBYOm bway-fzpipP bway-fqvBuz" data-custom-color=true style=--bway-component-heading-color:var(--bway-colors-text-on-overlay)><%= event.name %></h2><p class="bway-fzDuiy bway-bUSGBO bway-rwpGF bway-jqgGgD" data-custom-color=true style=--bway-component-text-color:var(--bway-colors-text-on-overlay)><%= event.dateRange %></p></div><a aria-label="<%= event.name %>" aria-disabled=false class="bway-fzEbLX bway-gwTpoJ bway-jYfgsR bway-bxBIFr bway-bcSDrL bway-hhbYfh bway-hghMRJ" href="/event/<%= event.slug %>"></a></div></div><% }); %></div></div></div></div></main></div></div></div><%- include('partials/footer') %>
+</body></html>

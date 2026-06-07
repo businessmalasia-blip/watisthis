@@ -5,6 +5,7 @@ const session = require('express-session');
 const { sequelize } = require('./models');
 const { attachUser } = require('./middleware/auth');
 const eventsApi = require('./services/eventsApi');
+const ticketmaster = require('./services/ticketmaster');
 const authRoutes = require('./routes/auth');
 const pageRoutes = require('./routes/pages');
 
@@ -31,6 +32,7 @@ app.use(attachUser);
 
 // Shared services exposed to routes via app.locals
 app.locals.eventsApi = eventsApi;
+app.locals.ticketmaster = ticketmaster;
 
 app.use('/', authRoutes);
 app.use('/', pageRoutes);

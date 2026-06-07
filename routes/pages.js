@@ -21,8 +21,13 @@ const CATEGORY_META = {
   },
 };
 
-router.get('/', (req, res) => {
-  res.render('main', { title: 'Tickets - Concert, Sport & Theatre Tickets | viagogo' });
+router.get('/', async (req, res, next) => {
+  try {
+    const events = await req.app.locals.ticketmaster.getPopularEvents();
+    res.render('main', { title: 'Tickets - Concert, Sport & Theatre Tickets | viagogo', events });
+  } catch (err) {
+    next(err);
+  }
 });
 
 router.get('/category/:slug', async (req, res, next) => {
@@ -31,7 +36,7 @@ router.get('/category/:slug', async (req, res, next) => {
   if (!meta) return next();
 
   try {
-    const events = await req.app.locals.eventsApi.getEventsByCategory(slug);
+    const events = await req.app.locals.ticketmaster.getEventsByCategory(slug);
     res.render('category', {
       title: `${meta.title} | viagogo`,
       slug,
