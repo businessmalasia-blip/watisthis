@@ -1,0 +1,279 @@
+/*
+ * Patch stylesheet for component-specific styled-components classes
+ * (sc-*) whose hashes differ between the snapshot's build and the
+ * currently served Broadway Design System bundle (viagogo-vendor.css /
+ * viagogo-entrypoint.css). The bway-* design-token classes already match
+ * and are styled by those bundles; these rules restore the layout/visual
+ * intent of the sc-* wrappers using the same design tokens.
+ */
+
+/* ---- Header shell & layout ---- */
+.sc-2mhbn6-0 {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bway-colors-bg-surface);
+  border-bottom: 1px solid var(--bway-colors-border);
+}
+
+.sc-16edoyw-0 {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 24px;
+}
+
+.sc-16edoyw-1 { display: flex; align-items: center; gap: 16px; margin-left: auto; }
+.sc-16edoyw-2 { display: flex; align-items: center; flex: 1; justify-content: center; }
+.sc-16edoyw-3 { display: flex; align-items: center; gap: 28px; }
+.sc-16edoyw-4 { display: none; }
+.sc-16edoyw-5 { display: flex; align-items: center; }
+
+.sc-19lw863-0 nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.sc-mwi9ra-0 { cursor: pointer; }
+.sc-mwi9ra-1 {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--bway-colors-text);
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color .15s ease, color .15s ease;
+}
+.sc-mwi9ra-0:hover .sc-mwi9ra-1 {
+  color: var(--bway-colors-primitives-orange-44, #ff5b1f);
+  border-bottom-color: var(--bway-colors-primitives-orange-44, #ff5b1f);
+}
+
+.sc-dtLLSo, .sc-lbVvkl { display: flex; align-items: center; }
+.sc-jrsJWq {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--bway-colors-text-subtle);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.sc-jrsJWq:hover { color: var(--bway-colors-text); }
+
+.sc-ckTSur { display: none; }
+.sc-ftml9m-0 { display: flex; align-items: center; gap: 12px; margin-left: 8px; }
+
+/* ---- Search bar ---- */
+.sc-oeezq.loaCTG, .sc-16edoyw-4 form { width: 100%; }
+.sc-pjf2ka-1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--bway-colors-bg-sunken);
+  border: 1px solid var(--bway-colors-border);
+  border-radius: 999px;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+}
+.sc-pjf2ka-3 {
+  position: absolute;
+  left: 14px;
+  display: flex;
+  color: var(--bway-colors-text-subtle);
+}
+.sc-164kd1i-1 {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 11px 16px 11px 40px;
+  font-size: 14px;
+  color: var(--bway-colors-text);
+  border-radius: 999px;
+  outline: none;
+}
+.sc-164kd1i-1::placeholder { color: var(--bway-colors-text-subtle); }
+
+/* ---- Brand logo ---- */
+.sc-2mhbn6-0 [data-testid="brand-logo"] svg path { fill: var(--bway-colors-primitives-green-40, #59b10c) !important; }
+.sc-2mhbn6-0 [data-testid="brand-logo"] svg path[fill="#4C5055"] { fill: var(--bway-colors-text, #4c5055) !important; }
+
+/* ---- Popular events section / cards ---- */
+.sc-fXgAZu { padding: 32px 0 64px; display: block; width: 100%; }
+.sc-1tj3e7z-1 { display: block; width: 100%; }
+.sc-1tj3e7z-0 { max-width: 1280px; margin: 0 auto; padding: 0 24px; width: 100%; box-sizing: border-box; }
+.sc-mcpoo6-0 { display: block; width: 100%; }
+.bway-fPSCSl.bway-hyZZHG { display: block; width: 100%; }
+.sc-cqgzlb-0 { display: block; width: 100%; }
+.sc-mcpoo6-0 h2 { font-size: 26px; font-weight: 800; margin: 0 0 20px; color: var(--bway-colors-text); }
+
+.sc-cqgzlb-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.sc-cqgzlb-1 > div {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--bway-colors-bg-sunken);
+}
+
+.sc-cqgzlb-1 img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sc-cqgzlb-1 h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0,0,0,.4);
+}
+.sc-cqgzlb-1 p {
+  font-size: 13px;
+  margin: 4px 0 0;
+  color: rgba(255,255,255,.85);
+  text-shadow: 0 1px 6px rgba(0,0,0,.4);
+}
+
+.sc-cqgzlb-1 > div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.65) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.sc-cqgzlb-1 > div > div:nth-child(2) {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  right: 16px;
+  z-index: 2;
+}
+
+.sc-cqgzlb-1 a[aria-disabled] {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+.sc-ln2vk9-3 {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 4;
+  background: rgba(0,0,0,.4);
+  border: none;
+  border-radius: 999px;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sc-ln2vk9-3 p { display: none; }
+.sc-ln2vk9-0 svg path { fill: #fff !important; fill-opacity: 1 !important; }
+
+/* ---- Footer (custom, faithful to viagogo brand: dark band, orange accents) ---- */
+.site-footer {
+  background: var(--bway-colors-primitives-neutral-10, #1a1a1a);
+  color: var(--bway-colors-primitives-neutral-90, #e6e6e6);
+  margin-top: 48px;
+  padding: 48px 0 28px;
+}
+.site-footer .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.site-footer .spotify-strip {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(30,215,96,.12);
+  border: 1px solid rgba(30,215,96,.35);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 28px;
+}
+.site-footer .spotify-strip .badge {
+  background: #1ed760;
+  color: #14151a;
+  font-weight: 800;
+  font-size: 13px;
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+.site-footer .app-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.site-footer .app-banner .qr-code {
+  width: 84px; height: 84px;
+  background: #fff; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: #14151a; font-size: 11px; font-weight: 700; text-align: center;
+}
+.site-footer .app-banner .store-badges { display: flex; gap: 12px; }
+.site-footer .app-banner .store-badges span {
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 8px; padding: 8px 14px; font-size: 13px; font-weight: 600;
+}
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 28px;
+  margin-bottom: 28px;
+}
+.site-footer .footer-col h4 {
+  font-size: 13px; text-transform: uppercase; letter-spacing: .05em;
+  color: rgba(255,255,255,.5); margin: 0 0 14px;
+}
+.site-footer .footer-col ul { list-style: none; margin: 0; padding: 0; }
+.site-footer .footer-col li { margin-bottom: 10px; }
+.site-footer .footer-col a {
+  color: #fff; text-decoration: none; font-size: 14px;
+}
+.site-footer .footer-col a:hover { color: var(--bway-colors-primitives-orange-44, #ff5b1f); }
+.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.12);
+  padding-top: 20px;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  font-size: 13px; color: rgba(255,255,255,.5);
+}
+.site-footer .btn.btn-outline {
+  border: 1px solid rgba(255,255,255,.3);
+  color: #fff;
+  background: transparent;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 22px;
+  margin-left: auto;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+}
+.site-footer .btn.btn-outline:hover {
+  border-color: var(--bway-colors-primitives-orange-44, #ff5b1f);
+  color: var(--bway-colors-primitives-orange-44, #ff5b1f);
+}
