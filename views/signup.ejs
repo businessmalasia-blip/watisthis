@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/header', { activeNav: null }) %>
+
+  <div class="auth-page">
+    <div class="auth-card">
+      <h1>Create your account</h1>
+      <p class="sub">Sign up to buy and sell tickets, save favourites and track your orders.</p>
+
+      <% if (error) { %><div class="alert"><%= error %></div><% } %>
+
+      <form action="/api/auth/signup" method="post">
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" minlength="8" required>
+        </div>
+        <div class="field">
+          <label for="confirmPassword">Confirm password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a href="/signin">Sign in</a></p>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

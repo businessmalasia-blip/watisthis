@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/header', { activeNav: null }) %>
+
+  <div class="container">
+    <div class="ticket-layout">
+      <div>
+        <h1 style="margin: 0 0 6px;"><%= event.name %></h1>
+        <p style="color: var(--color-text-muted); margin: 0 0 24px;">
+          <%= event.venue %> &middot; <%= event.city %> &middot; <%= event.date %>
+        </p>
+        <div class="venue-map">
+          <div class="stage">Stage</div>
+          <div class="ring">Interactive seating map</div>
+          <span>Select a section on the right to see available tickets</span>
+        </div>
+      </div>
+
+      <aside class="ticket-summary">
+        <h2><%= event.name %></h2>
+        <p class="venue-line"><%= event.venue %> &middot; <%= event.date %></p>
+
+        <ul class="section-list">
+          <% event.sections.forEach(function(sec) { %>
+            <li>
+              <span><%= sec.name %></span>
+              <span class="price">From $<%= sec.priceFrom %></span>
+            </li>
+          <% }) %>
+        </ul>
+
+        <button class="btn btn-primary" style="width:100%;">View tickets</button>
+      </aside>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

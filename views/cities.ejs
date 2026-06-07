@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/header', { activeNav: 'cities' }) %>
+
+  <section class="category-hero">
+    <div class="container">
+      <p class="eyebrow">Explore</p>
+      <h1>Top Cities</h1>
+      <p>Find live events happening in the world's most popular cities.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card-grid">
+        <% cities.forEach(function(city) { %>
+          <a href="/category/concerts" class="card">
+            <div class="card-image">City image</div>
+            <div class="card-body">
+              <h3 class="card-title"><%= city.name %></h3>
+              <p class="card-meta"><%= city.eventCount %> live events</p>
+            </div>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

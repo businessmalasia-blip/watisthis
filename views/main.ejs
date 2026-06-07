@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/header', { activeNav: null }) %>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Live events, real seats, real experiences.</h1>
+      <p>Discover concerts, sports and theatre happening near you — and buy or sell tickets with confidence on the world's largest ticket marketplace.</p>
+      <a href="/category/concerts" class="btn btn-primary">Explore concerts</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Trending Concerts</h2>
+      <div class="card-grid">
+        <% ['Bad Bunny - World Tour', 'Taylor Swift', 'Coldplay', 'Drake'].forEach(function(name) { %>
+          <a href="/category/concerts" class="card">
+            <div class="card-image">Event image</div>
+            <div class="card-body">
+              <h3 class="card-title"><%= name %></h3>
+              <p class="card-meta">Multiple dates &middot; Various venues</p>
+              <p class="card-price">From <strong>$99</strong></p>
+            </div>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Top Sports Events</h2>
+      <div class="card-grid">
+        <% ['Lakers vs Celtics', 'Real Madrid vs Barcelona', 'US Open Finals', 'Champions League Final'].forEach(function(name) { %>
+          <a href="/category/sports" class="card">
+            <div class="card-image">Event image</div>
+            <div class="card-body">
+              <h3 class="card-title"><%= name %></h3>
+              <p class="card-meta">Multiple dates &middot; Various venues</p>
+              <p class="card-price">From <strong>$89</strong></p>
+            </div>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Theatre Highlights</h2>
+      <div class="card-grid">
+        <% ['Hamilton', 'The Lion King', 'Wicked', 'Hadestown'].forEach(function(name) { %>
+          <a href="/category/theatre" class="card">
+            <div class="card-image">Event image</div>
+            <div class="card-body">
+              <h3 class="card-title"><%= name %></h3>
+              <p class="card-meta">Multiple dates &middot; Various venues</p>
+              <p class="card-price">From <strong>$55</strong></p>
+            </div>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/header', { activeNav: null }) %>
+
+  <div class="container">
+    <div class="empty-state">
+      <h1>My Tickets</h1>
+      <p>You haven't bought any tickets yet. When you do, they'll show up here.</p>
+      <a href="/" class="btn btn-primary" style="margin-top: 18px;">Browse events</a>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

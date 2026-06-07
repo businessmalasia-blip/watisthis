@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/header', { activeNav: slug }) %>
+
+  <section class="category-hero">
+    <div class="container">
+      <p class="eyebrow"><%= slug %></p>
+      <h1><%= meta.title %></h1>
+      <p><%= meta.tagline %></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Live Events</h2>
+      <% if (events.length) { %>
+        <div class="card-grid">
+          <% events.forEach(function(ev) { %>
+            <a href="/event/<%= ev.slug %>" class="card">
+              <div class="card-image">Event image</div>
+              <div class="card-body">
+                <h3 class="card-title"><%= ev.name %></h3>
+                <p class="card-meta"><%= ev.venue %> &middot; <%= ev.city %> &middot; <%= ev.date %></p>
+                <p class="card-price">From <strong>$<%= ev.minPrice %></strong></p>
+              </div>
+            </a>
+          <% }) %>
+        </div>
+      <% } else { %>
+        <p style="color: var(--color-text-muted);">No live events found in this category right now. Check back soon.</p>
+      <% } %>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

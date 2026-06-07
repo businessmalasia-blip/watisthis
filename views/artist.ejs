@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/header', { activeNav: null }) %>
+
+  <section class="container">
+    <div class="artist-hero">
+      <div class="avatar-lg"><%= artist.name.charAt(0) %></div>
+      <div>
+        <h1><%= artist.name %></h1>
+        <p><%= artist.description %></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="event-list">
+        <% artist.events.forEach(function(ev) { %>
+          <a href="/event/<%= ev.slug %>" class="event-row">
+            <div class="when"><%= ev.date %></div>
+            <div class="what">
+              <div class="name"><%= ev.name %></div>
+              <div class="where"><%= ev.venue %> &middot; <%= ev.city %></div>
+            </div>
+            <div class="from">
+              Tickets from
+              <strong>$<%= ev.minPrice %></strong>
+            </div>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>
